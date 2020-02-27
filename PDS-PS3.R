@@ -88,8 +88,21 @@ q=q+theme_dark()
 q
 #Save this prettier version too (Saves as RPlot_Q3_Version2.png)
 
-
-
-
+##Part III: Text-as-Data
+#Load prelim data as shown
+library(tidyverse)
+install.packages('tm')
+library(tm)
+install.packages('lubridate')
+library(lubridate)
+install.packages('wordcloud')
+library(wordcloud)
+tweets <- read_csv('https://politicaldatascience.com/PDS/Datasets/trump_tweets.csv')
+#separate tweets by date and time
+library(dplyr)
+library(tidyr)
+tweets <- separate(tweets,created_at,into=c("date","time"),sep=" ",remove=TRUE)
+#Find date range of tweets
+range(tweets$date) #The earliest date is 1/1/2014 and the last date is 9/9/2019
 
 
