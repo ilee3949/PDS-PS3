@@ -2,3 +2,4 @@
 ###Name: Isaac Lee
 ###ID: 438148
 
+#Q1
